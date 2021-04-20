@@ -1,0 +1,14 @@
+[
+    {
+      "Name":"dev",
+      "BaseUrl":"https://itunes.apple.com/"
+   },
+   {
+      "Name":"stag",
+      "BaseUrl":""
+   },
+   {
+      "Name":"pro",
+      "BaseUrl":""
+   }
+]

@@ -1,0 +1,13 @@
+export default {
+    FONT_SIZE_12PX: 12,
+    FONT_SIZE_16PX: 16,
+    FONT_SIZE_14PX: 14,
+    FONT_SIZE_15PX: 15,
+    FONT_SIZE_17PX: 17,
+    FONT_SIZE_2OX: 20,
+    FONT_SIZE_22PX: 22,
+    FONT_SIZE_24PX: 24,
+    FONT_SIZE_28PX: 28,
+    FONT_SIZE_30PX:30,
+  
+ };
