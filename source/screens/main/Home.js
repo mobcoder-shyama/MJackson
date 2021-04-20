@@ -19,7 +19,7 @@ const Home = (props) => {
         isLoader: true
     })
 
-   useEffect(() => {
+    useEffect(() => {
         getDataFromApi()
     }, [state.isLoader]);
 
@@ -38,6 +38,7 @@ const Home = (props) => {
 
     const Item = ({ title, data }) => (
 
+
         <TouchableWithoutFeedback onPress={() => props.navigation.navigate('details', { 'item': data })}>
             <View style={styles.item}>
 
@@ -53,11 +54,15 @@ const Home = (props) => {
                         <View>
                             <Text style={[styles.title, { fontSize: font.FONT_SIZE_12PX, color: colors.textColor.darkBlack }]}>Genre:-{(data.primaryGenreName)}</Text>
                             <Text style={[styles.title, { fontSize: font.FONT_SIZE_12PX, color: colors.textColor.darkBlack }]}>Release:-{releaseDate(data.releaseDate)}</Text>
+                            <Text style={[styles.title, { fontSize: font.FONT_SIZE_12PX, color: colors.textColor.darkBlack }]}>
+                                {getOr(0, 'trackTimeMillis', data) === 0 ? null :
+                                    (getOr(0, 'trackTimeMillis', data) / 6000).toFixed(0) + " min "}
+                            </Text>
                         </View>
 
                     </View>
 
-               </View>
+                </View>
 
             </View>
 
@@ -86,7 +91,7 @@ const Home = (props) => {
 
 
 
-    let { listData,isLoader } = state;
+    let { listData, isLoader } = state;
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
@@ -123,7 +128,7 @@ const Home = (props) => {
 }
 const styles = StyleSheet.create({
     item: {
-        backgroundColor:colors.background.skyBlue,
+        backgroundColor: colors.background.skyBlue,
         marginVertical: 8,
         marginHorizontal: 16,
         borderRadius: 10,
@@ -137,16 +142,16 @@ const styles = StyleSheet.create({
         fontSize: font.FONT_SIZE_15PX,
         color: colors.textColor.white,
         margin: 5,
-   },
-   loadContainer:{
-     flex: 1, alignItems: 'center', justifyContent: 'center'
-   },
-   loadText:{
-     marginTop: 25, color: colors.textColor.skyBlue, fontSize: font.FONT_SIZE_15PX
-   },
-   itemImg:{
-     width: "30%", height: 140, borderRadius: 10,
-   }
+    },
+    loadContainer: {
+        flex: 1, alignItems: 'center', justifyContent: 'center'
+    },
+    loadText: {
+        marginTop: 25, color: colors.textColor.skyBlue, fontSize: font.FONT_SIZE_15PX
+    },
+    itemImg: {
+        width: "30%", height: 140, borderRadius: 10,
+    }
 });
 
 export default Home;

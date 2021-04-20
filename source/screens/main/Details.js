@@ -11,6 +11,7 @@ import Header from '../../components/Header';
 
 
 
+
 const Details = (props) => {
 
     const [state, setState] = useState({
