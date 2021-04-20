@@ -6,7 +6,7 @@ import font from '../../styles/font';
 import { releaseDate } from '../../utils/DateUtils';
 import { getOr } from 'lodash/fp';
 import _ from 'lodash';
-import Header from '../../compoents/Header';
+import Header from '../../components/Header';
 
 
 

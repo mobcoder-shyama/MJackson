@@ -4,7 +4,7 @@ import colors from '../../styles/colors';
 import font from '../../styles/font';
 import { getOr } from 'lodash/fp';
 import {releaseDate} from '../../utils/DateUtils'
-import Header from '../../compoents/Header';
+import Header from '../../components/Header';
 
 
 
