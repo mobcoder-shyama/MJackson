@@ -14,3 +14,8 @@ Product → Scheme → Edit Scheme (cmd + <), make sure you're in the Run tab fr
 
 react-native run-ios
 
+For android
+
+react-native run-android
+
+
